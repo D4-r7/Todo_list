@@ -27,19 +27,8 @@ todoId = [];
 
 $('#add-btn').click(() =>{
 var textInput = $('#new-todo').val();
-$('ul').append(`<li id=${a++} onClick="reply_click(this.id)" > ${textInput} </li>`);
+$('ul').append(`<li id=${a++}>${textInput}</li>`);
 todoId.push(a)
+$('li:last-child').click((event) => {
+$(event.target).toggleClass('completed')});
 });
-
-$('li').click(()=>{
-    ('li').css( this + 'text-decoration', 'line-through');
-});
-
-
-
-
-
-
-
-
-
